@@ -6,7 +6,7 @@ on:
       - main # Trigger on pushes to the main branch
   pull_request:
     branches:
-      - main # Trigger on pull request to the main branch
+      - main # Trigger on pull requests to the main branch
 
 jobs:
   build:
@@ -40,7 +40,7 @@ jobs:
 
     # Upload the APK as an artifact
     - name: Upload APK
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v2
       with:
         name: app-release.apk
         path: app/build/outputs/apk/release/app-release.apk
